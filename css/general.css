@@ -32,12 +32,29 @@ html, body
     overflow-x: hidden;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width: 10px;
+    scrollbar-color: #384cff;
 }
 
 ::-webkit-scrollbar
 {
-    display: none;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+    background: #000a38;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: #384cff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: #384cff;
 }
 
 .navbar
@@ -67,7 +84,7 @@ html, body
 .navbar .nav-links
 {
     position: absolute;
-    right: 8%;
+    right: 1vw;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -75,24 +92,34 @@ html, body
     min-width: 20%;
 }
 
-.navbar .nav-links li
-{
-    padding: 5px 10px;
-}
-
 .navbar .nav-links li a
 {
+    position: relative;
     text-decoration: none;
     color: var(--text-color);
     font-weight: 400;
     transition: 200ms;
     filter: drop-shadow(2px 2px #333);
     font-size: 16px;
+    padding: 5px 10px;
 }
 
-.navbar .nav-links li a:hover
+.navbar .nav-links li a::before
 {
-    color: #00eeff;
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: white;
+    transform: scaleX(0);
+    transition: 200ms;
+}
+
+.navbar .nav-links li a:hover::before
+{
+    transform: scaleX(1);
 }
 
 .navbar .menu-icon
@@ -158,5 +185,10 @@ html, body
     .nav-links li a
     {
         filter: none !important;
+    }
+
+    .navbar .nav-links li a:active::before
+    {
+        transform: scaleX(1) !important;
     }
 }
