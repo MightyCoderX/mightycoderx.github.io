@@ -1,0 +1,102 @@
+@import "./general.css";
+
+.section
+{
+    height: 100vh;
+    width: 100%;
+}
+
+.hero
+{
+    position: relative;
+    color: white;
+}
+
+.hero img
+{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    filter: brightness(50%);
+    object-fit: cover;
+}
+
+.hero .about-me
+{
+    position: relative;
+    width: 100vmin;
+    max-width: 90%;
+    max-height: 90vh;
+    text-align: center;
+}
+
+.hero .about-me h2
+{
+    font-size: 6.5vmin;
+    background: rgba(var(--accent-color), 0.5);
+    clip-path: polygon(5% 50%, 0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+    margin-bottom: 20px;
+    animation: side-enter 1s;
+}
+
+.hero .about-me blockquote
+{
+    filter: drop-shadow(2px 2px #333);
+    font-size: 20px;
+    font-weight: 300;
+    transform-origin: 50% 20%;
+}
+
+.skills
+{
+    background: #030520;
+    color: var(--text-color-2);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px;
+    height: 100%;
+}
+
+.skills .skills-title
+{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.skills-grid .skill
+{
+    height: 300px;
+    width: 250px;
+    background: #333333b4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.skills-grid .skill .wrapper
+{
+    width: 100%;
+    height: 80%;
+}
+
+.skills-grid .skill img
+{
+    position: relative;
+    height: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.skills-grid .skill h2
+{
+    text-align: center;
+}

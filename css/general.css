@@ -1,0 +1,149 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400&display=swap');
+
+/* CSS Files */
+@import "./utils.css";
+@import "./animations.css";
+
+*, *::after, *::before
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --nav-bg: rgba(51, 51, 51, 0.8);
+    --content-bg: #222;
+    --accent-color: 2, 61, 255;
+    --main-font: 'Source Sans Pro', sans-serif;
+    --logo-font: 'MuseoModerno', cursive;
+    --text-color: white;
+    --text-color-2: #02afff;
+    --nav-height: 60px;
+}
+
+html, body
+{
+    background: var(--content-bg);
+    font-family: var(--main-font);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.navbar
+{
+    position: absolute;
+    width: 100%;
+    height: var(--nav-height);
+    z-index: 9999;
+    transition: 0.2s;
+    top: 0;
+}
+
+.navbar.top-enter
+{
+    background: var(--nav-bg);
+}
+
+.navbar .logo
+{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 35px;
+    left: 30px;
+    font-family: var(--logo-font);
+}
+
+.navbar .nav-links
+{
+    position: absolute;
+    right: 8%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 20%;
+}
+
+.navbar .nav-links li
+{
+    padding: 5px 10px;
+}
+
+.navbar .nav-links li a
+{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: 200ms;
+    filter: drop-shadow(2px 2px #333);
+    font-size: 16px;
+}
+
+.navbar .nav-links li a:hover
+{
+    color: #00eeff;
+}
+
+.navbar .menu-icon
+{
+    position: absolute;
+    width: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .menu-icon .line
+{
+    background: var(--text-color-2);
+    width: 30px;
+    height: 3px;
+}
+
+.navbar .menu-icon .line:not(:last-child)
+{
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 800px)
+{
+    .navbar .menu-icon
+    {
+        display: block;
+    }
+
+    .navbar .nav-links
+    {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(0);
+        height: 30vh;
+        width: 100vw;
+        top: var(--nav-height);
+        right: 0;
+        background: #030520ce;
+        padding: 20px;
+        clip-path: inset(0 0 100% 0);
+        transition: clip-path 0.2s;
+    }
+
+    .navbar .nav-links.shown
+    {
+        clip-path: inset(0);
+    }
+
+    .nav-links li
+    {
+        text-align: center;
+    }
+
+    .nav-links li a
+    {
+        filter: none !important;
+    }
+}
