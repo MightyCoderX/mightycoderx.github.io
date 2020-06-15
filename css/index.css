@@ -11,7 +11,7 @@
     width: 100%;
     height: 100vh;
     position: absolute;
-    filter: brightness(50%);
+    filter: brightness(60%);
     object-fit: cover;
 }
 
@@ -31,6 +31,7 @@
     clip-path: polygon(5% 50%, 0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
     margin-bottom: 20px;
     animation: side-enter 1s;
+    color: white;
 }
 
 .hero .about-me blockquote
@@ -47,17 +48,9 @@
     color: var(--text-color-2);
     font-weight: 600;
     font-size: 20px;
-    padding: 20px;
+    padding: 100px 20px 20px 40px;
     height: 100%;
     min-height: 100vh;
-}
-
-.skills .skills-title
-{
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 40px;
-    text-shadow: 0 0 20px #02e1ff;
 }
 
 .skills-grid
@@ -102,10 +95,184 @@
 {
     height: 100%;
     min-height: 100vh;
-    background: #005eac;
+    background: #002c50;
+    padding: 100px 20px 50px 20px;
 }
 
 .projects .projects-title
 {
     
+}
+
+.projects .projects-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.projects-grid .project
+{
+    height: 350px;
+    width: 300px;
+    max-width: 100%;
+    background: #00367c;
+    box-shadow: 0 0 20px #022642;
+}
+
+.projects-grid .project .wrapper
+{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.projects-grid .project .wrapper img
+{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.projects-grid .project .wrapper img:hover
+{
+    transform: scale(1.5);
+}
+
+.projects-grid .project .text-wrapper
+{
+    padding: 10px 20px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.button-link
+{
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    padding: 10px 10px;
+    width: 80%;
+    color: white;
+    border: 1px solid #eee;
+    background: transparent;
+    transition: 200ms;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-link:hover
+{
+    background: white;
+    color: black
+}
+
+.button-link:active
+{
+    background: #c2c2c2;
+}
+
+.contact
+{
+    background: #061d2b;
+    padding: 80px 20px 50px 20px;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.contact form
+{
+    background: #050c2e;
+    padding: 20px 40px;
+    color: white;
+    width: 90vmin;
+    margin: 0 auto;
+}
+
+.contact form h1
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact form *
+{
+    display: block;
+    width: 100%;
+    outline: none;
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"]
+{
+    padding: 8px;
+    margin-bottom: 20px;
+    background: #ffffff2d;
+    border: none;
+    border-bottom: 2px solid #0059ff;
+    transition: 0.2s;
+}
+
+.contact form input[type="text"]:focus,
+.contact form input[type="email"]:focus
+{
+    background: #abedf1;
+}
+
+.contact form textarea
+{
+    max-width: 100%;
+    height: 100px;
+    margin-bottom: 25px;
+    padding: 8px;
+    background: #ffffff2d;
+    border: none;
+    border-bottom: 2px solid #0059ff;
+    transition: 0.2s;
+    resize: none;
+    font-size: 16px;
+}
+
+.contact form textarea:focus
+{
+    background: #abedf1;
+}
+
+.contact form label
+{
+    margin-bottom: 10px;
+}
+
+.contact form button
+{
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 2px solid #0059ff;
+    color: white;
+    background: #0059ff;
+    transition: 0.2s;
+}
+
+.contact form button:hover
+{
+    background: #1869ff;
+}
+
+.footer
+{
+    height: 10vh;
+}
+
+.footer .copyright
+{
+    position: relative;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
 }

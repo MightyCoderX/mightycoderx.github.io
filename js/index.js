@@ -1,6 +1,16 @@
 const navbar = document.querySelector('.navbar');
 const navbarDefaultTransition = navbar.style.transition;
 const menuIcon = document.querySelector('.menu-icon');
+const buttonLinks = document.querySelectorAll('.button-link');
+
+buttonLinks.forEach(btn =>
+{
+    btn.addEventListener('click', e =>
+    {
+        window.open(btn.dataset.link, '_blank');
+    });
+});
+
 
 menuIcon.addEventListener('click', e =>
 {
