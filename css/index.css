@@ -148,6 +148,7 @@
     color: white;
     text-align: center;
     margin-bottom: 10px;
+    min-height: 30%;
 }
 
 .button-link
