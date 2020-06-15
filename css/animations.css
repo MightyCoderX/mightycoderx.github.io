@@ -2,11 +2,13 @@
 {
     from
     {
-        transform: translateX(-200%);
+        transform: translateY(-500%);
+        opacity: 0;
     }
 
     to
     {
-        transform: translateX(0%);
+        transform: translateY(0%);
+        opacity: 1;
     }
 }
