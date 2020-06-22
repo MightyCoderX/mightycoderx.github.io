@@ -253,9 +253,9 @@
 {
     padding: 10px 20px;
     margin-bottom: 20px;
-    border: 2px solid #0059ff;
+    border: 2px solid hsla(237, 82%, 50%, 1);
     color: white;
-    background: #0059ff;
+    background: hsla(237, 82%, 50%, 1);
     transition: 0.2s;
 }
 
