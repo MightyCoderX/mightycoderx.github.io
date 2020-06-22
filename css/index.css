@@ -95,7 +95,7 @@
 {
     height: 100%;
     min-height: 100vh;
-    background: #002c50;
+    background: hsla(236, 83%, 9%, 1);
     padding: 100px 20px 50px 20px;
 }
 
@@ -180,7 +180,7 @@
 
 .contact
 {
-    background: #061d2b;
+    background: hsla(237, 83%, 11%, 1);
     padding: 80px 20px 50px 20px;
     height: 100%;
     min-height: 100vh;
@@ -267,6 +267,7 @@
 .footer
 {
     height: 10vh;
+    background-color: hsla(237, 82%, 5%, 1);
 }
 
 .footer .copyright
