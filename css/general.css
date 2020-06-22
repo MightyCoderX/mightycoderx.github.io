@@ -43,18 +43,18 @@ html, body
 
 ::-webkit-scrollbar-track
 {
-    background: #000a38;
+    background: hsla(237, 82%, 15%, 1);
 }
 
 ::-webkit-scrollbar-thumb
 {
-    background: #384cff;
+    background: hsla(237, 82%, 25%, 1);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover
 {
-    background: #384cff;
+    background: hsla(237, 83%, 29%, 1);
 }
 
 .navbar
