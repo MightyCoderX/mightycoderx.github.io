@@ -11,7 +11,6 @@ buttonLinks.forEach(btn =>
     });
 });
 
-
 menuIcon.addEventListener('click', e =>
 {
     navbar.querySelector('.nav-links').classList.toggle('shown');
@@ -19,11 +18,12 @@ menuIcon.addEventListener('click', e =>
 
 document.querySelector('.logo').onclick = e => open('/', '_self');
 
+
 window.addEventListener('scroll', e =>
 {
     navbar.querySelector('.nav-links').classList.remove('shown');
 
-    let navAppearOffsetY = navbar.clientHeight * 1.7;
+    let navAppearOffsetY = document.querySelector('.hero').clientHeight*0.25;
 
     if(scrollY >= navbar.clientHeight && scrollY < innerHeight - navAppearOffsetY)
     {
