@@ -45,8 +45,8 @@
 .skills
 {
     background: hsl(var(--main-hue), var(--main-saturation), 7%);
-    color: var(--text-color-2);
-    font-weight: 600;
+    color: var(--section-title-color);
+    font-weight: 300;
     font-size: 20px;
     padding: 50px 20px;
     height: 100%;
@@ -66,7 +66,7 @@
 {
     height: 300px;
     width: 250px;
-    background: #001530;
+    background: hsl(var(--main-hue), var(--main-saturation), 10%);
     padding: 20px 10px;
     box-shadow: 0 0 20px #00010a;
 }
@@ -99,11 +99,6 @@
     padding: 50px 20px;
 }
 
-.projects .projects-title
-{
-    
-}
-
 .projects .projects-grid
 {
     display: grid;
@@ -118,8 +113,8 @@
     height: 400px;
     width: 300px;
     max-width: 100%;
-    background: #00367c;
-    box-shadow: 0 0 20px #022642;
+    background: hsl(var(--main-hue), var(--main-saturation), 15%);
+    box-shadow: 0 0 20px hsl(var(--main-hue), var(--main-saturation), 12%);
 }
 
 .projects-grid .project .wrapper
@@ -284,6 +279,6 @@
     position: relative;
     color: #999;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
     text-align: center;
 }
