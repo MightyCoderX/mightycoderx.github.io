@@ -224,6 +224,7 @@
     border: none;
     border-bottom: 2px solid #0059ff;
     transition: 0.2s;
+    color: white;
 }
 
 .contact form input[type="text"]:focus,
@@ -231,7 +232,6 @@
 .contact form textarea:focus
 {
     background: hsl(var(--main-hue), 45%, 20%);
-    color: white;
 }
 
 .contact form textarea
