@@ -216,6 +216,33 @@
     color: white;
 }
 
+.contact form input,
+.contact form textarea
+{
+    border: none;
+    margin-bottom: 25px;
+    background: #ffffff2d;
+}
+
+.contact form input + span,
+.contact form textarea + span
+{
+    position: relative;
+    left: 0;
+    top: -25px;
+    width: 100%;
+    height: 2px;
+    background: hsl(219, 100%, 50%);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.contact form input:focus + span,
+.contact form textarea:focus + span
+{
+    transform: scaleX(1);
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,
@@ -232,19 +259,13 @@ select:-webkit-autofill:focus
   caret-color: white;
 }
 
-.contact form input[type="text"],
-.contact form input[type="email"]
+.contact form input
 {
     padding: 8px;
-    margin-bottom: 25px;
-    background: #ffffff2d;
-    border: none;
-    border-bottom: 2px solid #0059ff;
     transition: 0.2s;
 }
 
-.contact form input[type="text"]:focus,
-.contact form input[type="email"]:focus,
+.contact form input:focus,
 .contact form textarea:focus
 {
     background: hsl(var(--main-hue), 45%, 20%);
@@ -254,11 +275,7 @@ select:-webkit-autofill:focus
 {
     max-width: 100%;
     height: 100px;
-    margin-bottom: 25px;
     padding: 8px;
-    background: #ffffff2d;
-    border: none;
-    border-bottom: 2px solid #0059ff;
     transition: 0.2s;
     resize: none;
     font-size: 16px;
