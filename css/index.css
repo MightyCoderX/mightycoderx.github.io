@@ -213,6 +213,7 @@
     display: block;
     width: 100%;
     outline: none;
+    color: white;
 }
 
 input:-webkit-autofill,
@@ -240,7 +241,6 @@ select:-webkit-autofill:focus
     border: none;
     border-bottom: 2px solid #0059ff;
     transition: 0.2s;
-    color: white;
 }
 
 .contact form input[type="text"]:focus,
