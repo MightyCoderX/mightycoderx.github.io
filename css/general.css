@@ -17,7 +17,7 @@
     --logo-font: 'MuseoModerno', cursive;
     --text-color: white;
     --section-title-color: hsl(199, 98%, 48%);
-    --nav-height: 60px;
+    --nav-height: 80px;
 }
 
 *, *::after, *::before

@@ -1,5 +1,5 @@
 const navbar = document.querySelector('.navbar');
-const navbarDefaultTransition = navbar.style.transition;
+// const navbarDefaultTransition = navbar.style.transition;
 const menuIcon = document.querySelector('.menu-icon');
 const buttonLinks = document.querySelectorAll('.button-link');
 
@@ -18,29 +18,58 @@ menuIcon.addEventListener('click', e =>
 
 document.querySelector('.logo').onclick = e => open('/', '_self');
 
+let lastScrollTop = window.pageYOffset;
 
 window.addEventListener('scroll', e =>
 {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
     navbar.querySelector('.nav-links').classList.remove('shown');
 
-    let navAppearOffsetY = document.querySelector('.hero').clientHeight*0.25;
-
-    if(scrollY >= navbar.clientHeight && scrollY < innerHeight - navAppearOffsetY)
+    if(scrollY >= innerHeight - navbar.clientHeight)
     {
-        navbar.style.position = "fixed";
-        navbar.style.top = `-${navbar.clientHeight}px`;
-    }
-    else if(scrollY >= innerHeight - navAppearOffsetY)
-    {
-        navbar.style.top = 0;
-        navbar.style.transition = navbarDefaultTransition;
-        navbar.classList.add('top-enter');
+        if (scrollTop > lastScrollTop) // Scroll Downwards
+        {
+            navbar.style.top = `-${navbar.clientHeight}px`;
+        }
+        else
+        {
+            navbar.style.position = 'fixed';
+            navbar.style.top = 0;
+            navbar.classList.add('top-enter');
+        }
     }
     else
     {
-        navbar.style.position = "absolute";
-        navbar.style.transition = "0s";
-        navbar.classList.remove('top-enter');
-        navbar.style.top = 0;
+        if(scrollTop == 0)
+        {
+            navbar.classList.remove('top-enter');
+            navbar.style.position = 'absolute';
+        }
     }
-});
+
+    
+
+    // let navAppearOffsetY = document.querySelector('.hero').clientHeight*0.25;
+
+    // if(scrollY >= navbar.clientHeight && scrollY < innerHeight - navAppearOffsetY)
+    // {
+    //     navbar.style.position = "fixed";
+    //     navbar.style.top = `-${navbar.clientHeight}px`;
+    // }
+    // else if(scrollY >= innerHeight - navAppearOffsetY)
+    // {
+    //     navbar.style.top = 0;
+    //     navbar.style.transition = navbarDefaultTransition;
+    //     navbar.classList.add('top-enter');
+    // }
+    // else
+    // {
+    //     navbar.style.position = "absolute";
+    //     navbar.style.transition = "0s";
+    //     navbar.classList.remove('top-enter');
+    //     navbar.style.top = 0;
+    // }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}, false);
