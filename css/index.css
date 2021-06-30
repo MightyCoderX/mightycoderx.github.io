@@ -117,7 +117,7 @@
     height: 400px;
     width: 300px;
     max-width: 100%;
-    background: hsl(var(--main-hue), var(--main-saturation), 15%);
+    /* background: hsl(var(--main-hue), var(--main-saturation), 15%); */
     /* box-shadow: 0 0 20px hsl(var(--main-hue), var(--main-saturation), 12%); */
     box-shadow: 5px 5px 5px 2px hsl(var(--main-hue), var(--main-saturation), 8%),
                 0px 0px 5px 5px hsl(var(--main-hue), var(--main-saturation), 11%); 
