@@ -17,7 +17,7 @@
     --logo-font: 'MuseoModerno', cursive;
     --text-color: white;
     --section-title-color: hsl(199, 98%, 48%);
-    --nav-height: 60px;
+    --nav-height: 80px;
 }
 
 *, *::after, *::before
@@ -142,7 +142,7 @@ html, body
 
 .navbar .menu-icon .line
 {
-    background: var(--text-color-2);
+    background: var(--section-title-color);
     width: 30px;
     height: 3px;
 }

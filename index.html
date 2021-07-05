@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
         <meta name="google-site-verification" content="GTC86NPy5NuyubFGvjIZnr-Q8r4Kd3Ue5QUt6R0kiZ4"/>
         
         <title>MightyCoderX</title>
-        <link rel="preload" href="https://fonts.googleapis.com">
-        <link rel="preload" href="https://kit.fontawesome.com">
+        
+        <link rel="preload" href="css/general.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://kit.fontawesome.com">
+
+        <meta name="description" content="My personal portfolio website">
+
+        <meta property="og:title" content="MightyCoderX">
+        <meta property="og:description" content="My personal portfolio website">
+        <meta property="og:site_name" content="mightycoderx.github.io">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://mightycoderx.github.io">
+        <meta property="og:image" content="https://mightycoderx.github.io/images/bg.jpg">
 
         <link rel="stylesheet" href="css/index.css">
         
@@ -33,48 +45,62 @@
         <section class="section hero" id="hero">
             <img src="./images/bg.jpg" alt="Hero Image">
             <div class="about-me center">
-                <h1 class="hero-title">I am MightyCoderX</h1>
+                <h1 class="hero-title">I'm MightyCoderX</h1>
                 <blockquote>
-                    I'm a junior developer, I can code full stack web apps using vanilla html, css and js, and also desktop apps mainly in java and python. 
+                    I'm a junior developer, I can code full stack web apps using vanilla html, css and js, and also desktop apps mainly in java and python. I'm always looking forward to learn new stuff and keep myself updated!
                 </blockquote>
             </div>
         </section>
         <section class="section skills" id="skills">
-            <h2 class="section-title">Languages I can code in</h2>
+            <h2 class="section-title">My Skills</h2>
             <div class="skills-grid">
                 <div class="skill">
                     <div class="wrapper">
-                        <img src="images/html.svg">
+                        <img src="images/html.svg" alt="html">
                     </div>
                     <h2>HTML</h2>
                 </div>
 
                 <div class="skill">
                     <div class="wrapper">
-                        <img src="images/css.svg">
+                        <img src="images/css.svg" alt="css">
                     </div>
                     <h2>CSS</h2>
                 </div>
                     
                 <div class="skill">
                     <div class="wrapper">
-                        <img src="images/js.svg">
+                        <img src="images/js.svg" alt="javascript">
                     </div>
                     <h2>JavaScript</h2>
                 </div>
 
                 <div class="skill">
                     <div class="wrapper">
-                        <img src="images/java.svg">
+                        <img src="images/java.svg" alt="java">
                     </div>
                     <h2>Java</h2>
                 </div>
 
                 <div class="skill">
                     <div class="wrapper">
-                        <img src="images/python.svg">
+                        <img src="images/python.svg" alt="python">
                     </div>
                     <h2>Python</h2>
+                </div>
+
+                <div class="skill">
+                    <div class="wrapper">
+                        <img src="images/vscode.svg" alt="Visual Studio Code">
+                    </div>
+                    <h2>VSCode</h2>
+                </div>
+
+                <div class="skill">
+                    <div class="wrapper">
+                        <img src="images/nodejs.svg" alt="nodejs">
+                    </div>
+                    <h2>Node.js</h2>
                 </div>
             </div>
         </section>
@@ -84,7 +110,7 @@
             <div class="projects-grid">
                 <div class="project">
                     <div class="wrapper">
-                        <img src="images/lan_chat.png">
+                        <img src="images/lan_chat.png" alt="LAN Chat">
                     </div>
                     <div class="text-wrapper">
                         <h2>Lan Chat</h2>
@@ -96,12 +122,12 @@
                 </div>
                 <div class="project">
                     <div class="wrapper">
-                        <img src="images/portfolio.png">
+                        <img src="images/portfolio.png" alt="This Portfolio">
                     </div>
                     <div class="text-wrapper">
                         <h2>My Portfolio</h2>
                         <p>
-                            My one-page portfolio website. 
+                            My one-page portfolio website.
                         </p>
                     </div>
                     <button class="button-link" data-link="https://github.com/MightyCoderX/mightycoderx.github.io">Check it out on github</button>

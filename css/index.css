@@ -27,19 +27,21 @@
 
 .hero .about-me .hero-title
 {
-    font-size: 2.5em;
-    /* background: rgba(var(--accent-color), 0.5); */
-    /* clip-path: polygon(5% 50%, 0 0, 95% 0, 100% 50%, 95% 100%, 0 100%); */
+    font-size: 4.5vmax;
     margin-bottom: 20px;
     animation: side-enter 1s;
-    color: white;
+    color: #ccc;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
 }
 
 .hero .about-me blockquote
 {
     /* filter: drop-shadow(2px 2px #333); */
-    font-size: 1.2em;
+    font-size: 1.5rem;
     font-weight: 400;
+    color: #ddd;
 }
 
 .skills
@@ -64,17 +66,20 @@
 
 .skills-grid .skill
 {
-    height: 300px;
     width: 250px;
-    background: hsl(var(--main-hue), var(--main-saturation), 10%);
+    height: 300px;
+    /* background: hsl(var(--main-hue), var(--main-saturation), 10%); */
     padding: 20px 10px;
-    box-shadow: 0 0 20px #00010a;
+    /* box-shadow: 0 0 20px #00010a; */
+    box-shadow: 5px 5px 5px 2px hsl(var(--main-hue), var(--main-saturation), 5.5%),
+                0px 0px 5px 5px hsl(var(--main-hue), var(--main-saturation), 8.5%);
+    border-radius: 0.5rem;
 }
 
 .skills-grid .skill .wrapper
 {
     width: 100%;
-    height: 80%;
+    height: 70%;
     margin-bottom: 10px;
 }
 
@@ -112,8 +117,12 @@
     height: 400px;
     width: 300px;
     max-width: 100%;
-    background: hsl(var(--main-hue), var(--main-saturation), 15%);
-    box-shadow: 0 0 20px hsl(var(--main-hue), var(--main-saturation), 12%);
+    /* background: hsl(var(--main-hue), var(--main-saturation), 15%); */
+    /* box-shadow: 0 0 20px hsl(var(--main-hue), var(--main-saturation), 12%); */
+    box-shadow: 5px 5px 5px 2px hsl(var(--main-hue), var(--main-saturation), 7.5%),
+                0px 0px 5px 5px hsl(var(--main-hue), var(--main-saturation), 10.5%); 
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 .projects-grid .project .wrapper
@@ -125,8 +134,10 @@
 
 .projects-grid .project .wrapper img
 {
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1.7rem;
     transition: 0.5s;
 }
 
@@ -218,11 +229,15 @@
 
 .contact form
 {
-    background: hsl(var(--main-hue), var(--main-saturation), 8%);
+    /* background: hsl(var(--main-hue), var(--main-saturation), 8%); */
+    
+    box-shadow: 5px 5px 5px 2px hsl(var(--main-hue), var(--main-saturation), 9.5%),
+                0px 0px 5px 5px hsl(var(--main-hue), var(--main-saturation), 12.5%); 
     padding: 20px 40px;
     color: white;
     width: 90vmin;
     margin: 0 auto;
+    border-radius: 0.5rem;
 }
 
 .contact form h1
