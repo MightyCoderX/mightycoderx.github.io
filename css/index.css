@@ -223,8 +223,8 @@
     background: hsl(var(--main-hue), var(--main-saturation), 11%);
     height: 100%;
     min-height: 100vh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .contact form
@@ -238,6 +238,15 @@
     width: 90vmin;
     margin: 0 auto;
     border-radius: 0.5rem;
+    height: max-content;
+}
+
+.contact form > *
+{
+    display: block;
+    outline: none;
+    color: white;
+    width: 100%;
 }
 
 .contact form h1
@@ -246,24 +255,17 @@
     margin-bottom: 20px;
 }
 
-.contact form *
-{
-    display: block;
-    width: 100%;
-    outline: none;
-    color: white;
-}
-
 .contact form input,
 .contact form textarea
 {
     border: none;
     margin-bottom: 25px;
     background: #ffffff2d;
+    border-radius: 5px;
 }
 
-.contact form input + span,
-.contact form textarea + span
+.contact form input + div,
+.contact form textarea + div
 {
     position: relative;
     left: 0;
@@ -275,8 +277,8 @@
     transition: transform 0.3s;
 }
 
-.contact form input:focus + span,
-.contact form textarea:focus + span
+.contact form input:focus + div,
+.contact form textarea:focus + div
 {
     transform: scaleX(1);
 }
@@ -292,7 +294,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus
 {
   -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px hsl(var(--main-hue), 45%, 20%) inset;
+  box-shadow: 0 0 0 1000px hsl(var(--main-hue), 45%, 20%) inset;
   transition: background-color 5000s ease-in-out 0s;
   caret-color: white;
 }
@@ -317,6 +319,7 @@ select:-webkit-autofill:focus
     transition: 0.2s;
     resize: none;
     font-size: 16px;
+    margin-bottom: 2rem;
 }
 
 .contact form label
@@ -327,12 +330,16 @@ select:-webkit-autofill:focus
 .contact form button
 {
     padding: 10px 20px;
+    margin-inline: auto;
     margin-bottom: 20px;
     border: 2px solid hsl(var(--main-hue), var(--main-saturation), 50%);
     color: white;
     background: hsl(var(--main-hue), var(--main-saturation), 50%);
     transition: 0.2s;
     font-size: 15px;
+    border-radius: 100vw;
+    width: 60%;
+    min-width: 200px;
 }
 
 .contact form button:hover
