@@ -254,7 +254,6 @@
 .contact form textarea
 {
     border: none;
-    margin-bottom: 25px;
     background: #ffffff2d;
     border-radius: 5px;
 }
@@ -298,6 +297,7 @@ select:-webkit-autofill:focus
 {
     padding: 8px;
     transition: 0.2s;
+    margin-bottom: 25px;
 }
 
 .contact form input:focus,
@@ -315,6 +315,11 @@ select:-webkit-autofill:focus
     resize: none;
     font-size: 16px;
     margin-bottom: 2rem;
+}
+
+.contact form textarea + div
+{
+    top: -2rem;
 }
 
 .contact form label
@@ -335,6 +340,7 @@ select:-webkit-autofill:focus
     border-radius: 100vw;
     width: 60%;
     min-width: 200px;
+    box-shadow: 0 0 0.5rem #0007;
 }
 
 .contact form button:hover
