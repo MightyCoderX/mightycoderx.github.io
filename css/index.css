@@ -216,8 +216,7 @@
 .contact
 {
     background: hsl(var(--main-hue), var(--main-saturation), 11%);
-    height: max-content;
-    min-height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -355,15 +354,15 @@ select:-webkit-autofill:focus
 
 .contact .links
 {
-    box-shadow: 5px 5px 5px 2px hsl(var(--main-hue), var(--main-saturation), 9.5%),
-                0px 0px 5px 5px hsl(var(--main-hue), var(--main-saturation), 12.5%); 
-    padding: 20px 40px;
+    /* box-shadow: 5px 5px 5px 2px hsl(var(--main-hue), var(--main-saturation), 9.5%),
+                0px 0px 5px 5px hsl(var(--main-hue), var(--main-saturation), 12.5%);  */
+    padding: 1rem 0;
     width: 90vmin;
     border-radius: 0.5rem;
     color: #ddd;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .contact .links img
