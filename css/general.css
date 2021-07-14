@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400&display=swap');
 
 /* CSS Files */
-@import "./utils.css";
-@import "./animations.css";
+@import "utils.css";
+@import "animations.css";
 
 :root
 {
@@ -81,6 +81,7 @@ html, body
     font-size: 35px;
     left: 30px;
     font-family: var(--logo-font);
+    text-decoration: none;
 }
 
 .navbar .nav-links

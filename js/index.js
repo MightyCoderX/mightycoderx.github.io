@@ -16,8 +16,6 @@ menuIcon.addEventListener('click', e =>
     navbar.querySelector('.nav-links').classList.toggle('shown');
 });
 
-document.querySelector('.logo').onclick = e => open('/', '_self');
-
 let lastScrollTop = window.pageYOffset;
 
 window.addEventListener('scroll', e =>
