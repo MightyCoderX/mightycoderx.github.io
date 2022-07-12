@@ -27,12 +27,12 @@
 
 .hero .about-me .hero-title
 {
-    font-size: 4.5vmax;
+    font-size: max(12vmin, 3.5rem);
     margin-bottom: 20px;
     animation: side-enter 1s;
     color: #ccc;
-    text-transform: uppercase;
-    font-weight: 800;
+    /* text-transform: uppercase; */
+    font-weight: 600;
     letter-spacing: 0.2rem;
 }
 
@@ -363,6 +363,16 @@ select:-webkit-autofill:focus
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.contact .links a
+{
+    opacity: 1;
+}
+
+.contact .links a:hover
+{
+    opacity: 0.7;
 }
 
 .contact .links img
